@@ -1,6 +1,4 @@
-grammar={"S":["Aa","Ba"],
-        "A":["aB"],
-        "B":["c"],
+grammar={
 }
 def getFirst(sym):
     if( sym not in grammar.keys()):
@@ -39,12 +37,11 @@ def getFollow(val):
     return s
     
 i=0
-# while(True):
-#     args=input("Enter Production Rule (Enter - to stop) > ").split()
-#     if(len(args)==0 or args[0]=="-"):
-#         break
-#     grammar[args[0]]=args[1:]
-# print(grammar)
+while(True):
+    args=input("Enter Production Rule (Enter - to stop) > ").split()
+    if(len(args)==0 or args[0]=="-"):
+        break
+    grammar[args[0]]=args[1:]
 
 while(True):
     args=input("First(0)/Follow(1) : <val> > ").split()
